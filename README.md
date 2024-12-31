@@ -19,7 +19,7 @@ A set of different gamemode templates for the PySAMP
 
 ### Rivershell
 - A "capture flag" - like gamemode
-- Containts example of working with vehicles
+- Containts example of working with vehicles and player teams
 
 > [!TIP]
 > Note that some gamemodes contain a modified player class, this allows us to get the same class instance in events / functions and not lose our class instance attributes.
