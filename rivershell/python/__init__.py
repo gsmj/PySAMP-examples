@@ -96,6 +96,7 @@ def on_player_spawn(player: Player) -> None:
 @Player.on_enter_checkpoint
 @Player.using_registry
 def on_player_enter_checkpoint(player: Player) -> None:
+    global is_objective_reached
     if is_objective_reached:
         return
 
@@ -128,7 +129,6 @@ def on_player_enter_checkpoint(player: Player) -> None:
             )
             set_vehicle_to_respawn(OBJECTIVE_VEHICLE_BLUE)
 
-    global is_objective_reached
     is_objective_reached = True
 
 @Player.on_death

@@ -73,7 +73,6 @@ def help(player: Player) -> None:
 
 
 @Player.command(aliases=("bar", ))
-@Player.using_registry
 def foo(player: Player):
     player.send_client_message(COLOR_YELLOW, f"Hi, {player.get_name()}!")
     player.send_client_message(
