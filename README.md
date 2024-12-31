@@ -17,8 +17,12 @@ A set of different gamemode templates for the PySAMP
 - A deathmatch gamemode
 - Containts example commands
 
+### Rivershell
+- A "capture flag" - like gamemode
+- Containts example of working with vehicles
+
 > [!TIP]
-> Note that some gamemodes contain a modified player class, this allows us to get the same class instance in events  /functions and not lose our class instance attributes.
+> Note that some gamemodes contain a modified player class, this allows us to get the same class instance in events / functions and not lose our class instance attributes.
 > You should definitely use this method in your own gamemodes.
 
 ## Thanks to
