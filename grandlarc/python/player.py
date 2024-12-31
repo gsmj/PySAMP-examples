@@ -1,6 +1,7 @@
 from pysamp.player import Player as BasePlayer
 from functools import wraps
 
+
 class Player(BasePlayer):
     _registry = {}
     """
@@ -11,7 +12,6 @@ class Player(BasePlayer):
         self.city_selection = -1
         self.has_city_selected = False
         self.last_city_selection_tick = 0
-
 
     @classmethod
     def from_registry_native(cls, player: BasePlayer) -> "Player":
@@ -28,7 +28,6 @@ class Player(BasePlayer):
 
         return player
 
-
     @classmethod
     def using_registry(cls, func):
         """
@@ -42,7 +41,6 @@ class Player(BasePlayer):
             return func(*args, **kwargs)
 
         return from_registry
-
 
     @classmethod
     def delete_registry(cls, player: BasePlayer):

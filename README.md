@@ -3,6 +3,9 @@ A set of different gamemode templates for the PySAMP
 
 ## Gamemodes:
 
+### Empty
+- An empty gamemode with the **Player class registry**
+
 ### PyLarc
 - A freeroam gamemode for SA-MP 0.3.
 - Containts example of **Player class registry**
@@ -13,7 +16,3 @@ A set of different gamemode templates for the PySAMP
 ### LVDM
 - A deathmatch gamemode
 - Containts example commands
-
-### RC Barron
-- A demonstration vehicle vs vehicle gamemode
-- Containts example textdraws and the use of GTA ~k~ key constants.
