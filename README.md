@@ -17,6 +17,10 @@ A set of different gamemode templates for the PySAMP
 - A deathmatch gamemode
 - Containts example commands
 
+> [!TIP]
+> Note that some gamemodes contain a modified player class, this allows us to get the same class instance in events  /functions and not lose our class instance attributes.
+> You should definitely use this method in your own gamemodes.
+
 ## Thanks to
 * [denNorske](https://github.com/dennorske), [habecker](https://github.com/habecker), [Cheaterman](https://github.com/Cheaterman) for developing PySAMP
 * To everyone who helped in the development of the project
