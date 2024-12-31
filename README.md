@@ -16,3 +16,7 @@ A set of different gamemode templates for the PySAMP
 ### LVDM
 - A deathmatch gamemode
 - Containts example commands
+
+## Thanks to
+* [denNorske](https://github.com/dennorske), [habecker](https://github.com/habecker), [Cheaterman](https://github.com/Cheaterman) for developing PySAMP
+* To everyone who helped in the development of the project
