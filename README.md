@@ -1,8 +1,19 @@
 # PySAMP-examples
 A set of different gamemode templates for the PySAMP
 
-## List of game modes:
-- Grandlarc - A freeroam gamemode for SA-MP 0.3. Also containts example of **Player class registry**
-- Timertest - A simple game mode that shows how timers work
-- LVDM - A deathmatch gamemode with example commands
-- Barron - A demonstration vehicle vs vehicle gamemode
+## Gamemodes:
+
+### PyLarc
+- A freeroam gamemode for SA-MP 0.3.
+- Containts example of **Player class registry**
+
+### Timerterst
+- A simple gamemode that shows how timers work
+
+### LVDM
+- A deathmatch gamemode
+- Containts example commands
+
+### RC Barron
+- A demonstration vehicle vs vehicle gamemode
+- Containts example textdraws and the use of GTA ~k~ key constants.
