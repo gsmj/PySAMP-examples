@@ -32,7 +32,8 @@ class Player(BasePlayer):
     @classmethod
     def using_registry(cls, func):
         """
-        This should be used to make sure that our callback takes an instance of the class from the dictionary
+        This should be used to make sure that our callback takes an instance \
+        of the class from the dictionary
         """
         @wraps(func)
         def from_registry(*args, **kwargs):

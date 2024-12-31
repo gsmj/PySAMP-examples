@@ -1,27 +1,6 @@
 # Some player spawn points around the 3 main cities of San Andreas.
 # Thanks to krisk, Popz and Woet.
 
-# Police dept spawns LS/SF/LV.
-police_spawns = [
-[1568.2250,-1693.5483,5.8906,177.0983],
-[-1604.8442,732.9442,-5.2344,37.6041],
-[2343.4553,2455.5994,14.9688,96.5022]
-]
-
-# Medical dept spawns LS/SF/LV.
-medical_spawns = [
-[1568.2250,-1693.5483,5.8906,177.0983],
-[-1604.8442,732.9442,-5.2344,37.6041],
-[1609.5922,1820.9641,10.8280,348.1614]
-]
-
-# Army spawns LS/SF/LV.
-army_spawns = [
-[2786.2183,-2436.7859,13.6340,82.3043],
-[-1308.4493,504.9661,11.1953,132.5],
-[272.6040,1989.7307,17.6406,268.3605]
-]
-
 los_santos_spawns = [
 [1751.1097,-2106.4529,13.5469,183.1979], # El-Corona - Outside random house
 [2652.6418,-1989.9175,13.9988,182.7107], # Random house in willowfield - near playa de seville and stadium

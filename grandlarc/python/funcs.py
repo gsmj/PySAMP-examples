@@ -1,5 +1,5 @@
 from pysamp import add_static_vehicle_ex
-import os
+
 
 def load_from_file(filename):
     vehicles_loaded = 0
@@ -12,16 +12,16 @@ def load_from_file(filename):
                 index = line.split(",")
                 if len(index) < 1:
                     continue
-                
+
                 vehicletype = int(index[0])
                 spawn_x = float(index[1])
-                spawn_y = float(index[2]) 
+                spawn_y = float(index[2])
                 spawn_z = float(index[3])
                 spawn_rot = float(index[4])
                 color_1 = int(index[5])
-                color_2 = int(index[6].split(";")[0]) 
-  
-                if vehicletype < 400 or vehicletype > 611: 
+                color_2 = int(index[6].split(";")[0])
+
+                if vehicletype < 400 or vehicletype > 611:
                     continue
                 if (
                 index[0] == -1 or

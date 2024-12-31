@@ -8,21 +8,26 @@ from pysamp import (
     enable_stunt_bonus_for_all,
     disable_interior_enter_exits,
     set_weather,
-    limit_global_chat_radius,
     add_player_class,
-    send_client_message,
     get_tick_count,
-    )
-from .spawns import *
+)
 from .funcs import load_from_file
-from .vars import *
+from .spawns import (
+    los_santos_spawns,
+    las_venturas_spawns,
+    san_fierro_spawns,
+
+)
+from .vars import (
+    COLOR_WHITE,
+    CITY_LOS_SANTOS,
+    CITY_SAN_FIERRO,
+    CITY_LAS_VENTURAS,
+)
 from .player import Player
 from pysamp.textdraw import TextDraw
-from pysamp.commands import cmd
-from pysamp import callbacks
 import random
 
-################################
 """
 Hello dear user!
 Welcome to the Python version of the original Grand Larceny gamemode!
@@ -37,17 +42,17 @@ find any bugs, you can report them on our repo; https://github.com/pysamp/PySAMP
 For now, enjoy the code, and good luck!
 denNorske & Habecker
 
-Re-written for PySAMP 2.1.0 by Ykpauneu
+Re-written for PySAMP 2.1.0 by gsmj
 """
-################################
 
 @on_gamemode_init
-def on_ready():
+def on_ready() -> None:
     set_game_mode_text("PyLarc")
     print("-----------------------------------------------")
-    print("Running Grand Larceny - by the SA-MP team\nRe-written to Python by the PySAMP Team")
+    print("Running Grand Larceny - by the SA-MP team")
+    print("Re-written to Python by the PySAMP Team")
     print("-----------------------------------------------")
-    show_player_markers(1) # PLAYER_MARKERS_MODE_GLOBAL = 1
+    show_player_markers(1)  # PLAYER_MARKERS_MODE_GLOBAL = 1
     show_name_tags(True)
     set_name_tag_draw_distance(40)
     enable_stunt_bonus_for_all(False)
@@ -126,7 +131,7 @@ def on_exit():
 
 @Player.on_connect
 @Player.using_registry
-def on_player_connect(player: Player):
+def on_player_connect(player: Player) -> None:
     player.game_text("~w~Grand Larceny", 3000, 4)
     player.send_client_message(COLOR_WHITE, "Welcome to Grand Larceny")
     player.last_city_selection_tick = get_tick_count()
@@ -226,8 +231,11 @@ def class_selection_init_textdraws():
     class_selection_init_city_names(las_venturas_txd)
 
     # Init our observer helper text display
-    class_helper_txd = TextDraw.create(10.0, 415.0,
-        "Press ~b~~k~~GO_LEFT~ ~w~or ~b~~k~~GO_RIGHT~ ~w~to switch cities.~n~ Press ~r~~k~~PED_FIREWEAPON~ ~w~to select.")
+    class_helper_txd = TextDraw.create(
+        10.0,
+        415.0,
+        "Press ~b~~k~~GO_LEFT~ ~w~or ~b~~k~~GO_RIGHT~ ~w~to switch cities.~n~ Press ~r~~k~~PED_FIREWEAPON~ ~w~to select."
+    )
     class_helper_txd.use_box(True)
     class_helper_txd.box_color(572662459)
     class_helper_txd.letter_size(0.3, 1.0)
@@ -349,7 +357,7 @@ def on_player_request_class(player: Player, classid: int):
     if player.is_npc():
         return
 
-    if player.has_city_selected == True:
+    if player.has_city_selected:
         class_selection_setup_char(player)
 
     else:
@@ -371,7 +379,7 @@ def on_player_update(player: Player):
     if player.is_npc():
         return
 
-    if player.has_city_selected == False and player.get_state() == 9:
+    if not player.has_city_selected and player.get_state() == 9:
         class_selection_handle(player)
 
     if player.get_interior()!= 0 and player.weapon() != 0:
